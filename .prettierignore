@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+dist/
+build/
+
+# Config files
+*.config.js
+*.config.ts
+vite.config.ts
+eslint.config.js
+
+# Type definitions
+*.d.ts
+
+# Public assets
+public/
+
+# Coverage
+coverage/
+
+# Package files
+package.json
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
