@@ -1,10 +1,10 @@
 import React from "react";
-import { PageLayout } from "../../components";
+import { Banner, PageLayout } from "../../components";
 
 export const HomePage: React.FC = () => {
     return (
         <PageLayout>
-            <>Banner</>
+            <Banner />
         </PageLayout>
     );
 };

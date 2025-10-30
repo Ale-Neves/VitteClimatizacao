@@ -1,8 +1,8 @@
 export const theme = {
     colors: {
         primary: {
-            main: "#00BBFF",
-            cyan: "#00F6FF",
+            main: "#00bbff",
+            cyan: "#00ffff",
         },
         background: {
             primary: "#1B1B1B",
@@ -12,6 +12,24 @@ export const theme = {
         text: {
             primary: "#FFFFFF",
             secondary: "#000000",
+        },
+        notification: {
+            success: {
+                bg: "#10B981",
+                border: "#059669",
+            },
+            error: {
+                bg: "#EF4444",
+                border: "#DC2626",
+            },
+            warning: {
+                bg: "#F59E0B",
+                border: "#D97706",
+            },
+            info: {
+                bg: "#3B82F6",
+                border: "#2563EB",
+            },
         },
         gray: {
             50: "#f9fafb",
@@ -38,6 +56,14 @@ export const theme = {
         bold: 700,
         extrabold: 800,
         black: 900,
+    },
+    lineHeights: {
+        none: 1,
+        tight: 1.25,
+        snug: 1.375,
+        normal: 1.5,
+        relaxed: 1.625,
+        loose: 2,
     },
     gradients: {
         primary: "linear-gradient(90deg, #00FFFF 0%, #00BBFF 100%)",
