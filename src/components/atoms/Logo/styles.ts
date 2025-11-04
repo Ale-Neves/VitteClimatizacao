@@ -27,6 +27,16 @@ export const LogoImage = styled.img<{ $isVisible: boolean }>`
         height: 65px;
         max-width: 220px;
     }
+
+    @media (min-width: 1920px) {
+        height: 75px;
+        max-width: 250px;
+    }
+
+    @media (min-width: 1536px) {
+        height: 80px;
+        max-width: 270px;
+    }
 `;
 
 export const LogoText = styled.h1<{ $isVisible: boolean }>`
@@ -44,5 +54,13 @@ export const LogoText = styled.h1<{ $isVisible: boolean }>`
 
     @media (min-width: 992px) {
         font-size: 2rem;
+    }
+
+    @media (min-width: 1920px) {
+        font-size: 2.25rem;
+    }
+
+    @media (min-width: 1536px) {
+        font-size: 2.5rem;
     }
 `;

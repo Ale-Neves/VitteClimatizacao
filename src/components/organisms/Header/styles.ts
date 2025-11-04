@@ -19,7 +19,11 @@ export const HeaderContainer = styled.header`
     }
 
     ${media.xxl} {
-        height: 95px;
+        height: 105px;
+    }
+
+    ${media["2xl"]} {
+        height: 110px;
     }
 `;
 
@@ -103,6 +107,14 @@ export const NavItem = styled.li<{ $isActive?: boolean }>`
 
     &:hover::after {
         width: 100%;
+    }
+
+    ${media.xxl} {
+        font-size: 18px;
+    }
+
+    ${media["2xl"]} {
+        font-size: 20px;
     }
 `;
 
@@ -211,6 +223,14 @@ export const MobileNavItem = styled.li<{ $isActive?: boolean }>`
 
     &:last-child {
         border-bottom: none;
+    }
+
+    ${media.xxl} {
+        font-size: 20px;
+    }
+
+    ${media["2xl"]} {
+        font-size: 22px;
     }
 `;
 

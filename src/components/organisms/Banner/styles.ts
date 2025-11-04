@@ -40,8 +40,13 @@ export const BannerContainer = styled.section`
     }
 
     ${media.xxl} {
-        min-height: 560px;
-        margin-top: 95px;
+        min-height: 600px;
+        margin-top: 105px;
+    }
+
+    ${media["2xl"]} {
+        min-height: 650px;
+        margin-top: 110px;
     }
 `;
 
@@ -105,6 +110,16 @@ export const BannerText = styled.p`
         font-size: 1.875rem;
         line-height: ${({ theme }) => theme.lineHeights.normal};
     }
+
+    ${media.xxl} {
+        font-size: 2.25rem;
+        line-height: ${({ theme }) => theme.lineHeights.normal};
+    }
+
+    ${media["2xl"]} {
+        font-size: 2.625rem;
+        line-height: ${({ theme }) => theme.lineHeights.normal};
+    }
 `;
 
 export const ButtonContainer = styled.div`
@@ -120,69 +135,6 @@ export const ButtonContainer = styled.div`
 
     ${media.md} {
         gap: 1.5rem;
-    }
-`;
-
-export const BaseButton = styled.button`
-    font-family: ${({ theme }) => theme.fonts.primary};
-    font-size: 1rem;
-    font-weight: ${({ theme }) => theme.fontWeights.semibold};
-    padding: 14px 1.5rem;
-    border-radius: 0.5rem;
-    border: 2px solid transparent;
-    cursor: pointer;
-    transition: ${({ theme }) => theme.transitions.normal};
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    justify-content: center;
-    width: 100%;
-    flex: 1;
-
-    ${media.sm} {
-        font-size: 1rem;
-        padding: 1rem 2rem;
-    }
-
-    ${media.md} {
-        font-size: 1.5rem;
-        padding: 18px 36px;
-    }
-
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px ${({ theme }) => theme.colors.background.overlay};
-    }
-
-    &:active {
-        transform: translateY(0);
-    }
-`;
-
-export const PrimaryButton = styled(BaseButton)`
-    background-color: ${({ theme }) => theme.colors.background.primary};
-    color: ${({ theme }) => theme.colors.primary.cyan};
-    border-color: ${({ theme }) => theme.colors.background.primary};
-
-    &:hover {
-        background-color: ${({ theme }) => theme.colors.gray[800]};
-        border-color: ${({ theme }) => theme.colors.gray[800]};
-        color: ${({ theme }) => theme.colors.primary.cyan};
-    }
-`;
-
-export const SecondaryButton = styled(BaseButton)`
-    background-color: transparent;
-    color: ${({ theme }) => theme.colors.text.primary};
-    border-color: ${({ theme }) => theme.colors.text.primary};
-
-    &:hover {
-        background-color: ${({ theme }) => theme.colors.background.primary};
-        color: ${({ theme }) => theme.colors.primary.cyan};
-
-        svg {
-            fill: ${({ theme }) => theme.colors.primary.cyan};
-        }
     }
 `;
 
@@ -231,6 +183,10 @@ export const BannerImage = styled.img`
     }
 
     ${media.xxl} {
-        width: 550px;
+        width: 500px;
+    }
+
+    ${media["2xl"]} {
+        width: 530px;
     }
 `;

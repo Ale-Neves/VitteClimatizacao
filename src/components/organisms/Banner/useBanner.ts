@@ -1,11 +1,25 @@
 import { useNotifications } from "../../../hooks/useNotifications";
-import { MENSAGEM_WHATSAPP } from "./constants";
+import { MENSAGEM_WHATSAPP, DESCRICAO_BANNER, DESCRICAO_BANNER_MOBILE } from "./constants";
 import type { BannerProps } from "./types";
+import { useState, useEffect } from "react";
 
 export const useBanner = ({ onRequestBudget, onViewServices }: BannerProps) => {
     const { showSuccess, showInfo } = useNotifications();
     const whatsappIcon = "src/assets/icons/icon_whatsapp.svg";
     const ferramentaIcon = "src/assets/icons/icon_ferramentas.svg";
+    
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 640);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const bannerText = isMobile ? DESCRICAO_BANNER_MOBILE : DESCRICAO_BANNER;
 
     const handleRequestBudget = () => {
         const message = encodeURIComponent(MENSAGEM_WHATSAPP);
@@ -36,5 +50,6 @@ export const useBanner = ({ onRequestBudget, onViewServices }: BannerProps) => {
         handleViewServices,
         whatsappIcon,
         ferramentaIcon,
+        bannerText,
     };
 };
