@@ -11,7 +11,7 @@ export const BannerContainer = styled.section`
     );
     display: flex;
     align-items: center;
-    padding: 3rem 1rem;
+    padding: 0rem 3rem;
     margin-top: 60px;
     align-items: flex-end;
 
@@ -77,8 +77,18 @@ export const TextSection = styled.div`
     gap: 2rem;
 
     ${media.lg} {
+        position: relative;
+        top: 46px;
         gap: 3rem;
         max-width: 60%;
+    }
+
+    ${media.xl} {
+        top: 15px;
+    }
+
+    ${media["2xl"]} {
+        top: -70px;
     }
 `;
 
@@ -128,13 +138,30 @@ export const ButtonContainer = styled.div`
     gap: 1rem;
     width: 100%;
 
+    button {
+        padding: 12px 24px !important;
+        font-size: 16px !important;
+        height: auto;
+    }
+
     ${media.sm} {
         flex-direction: row;
         gap: 1.5rem;
+        
+        button {
+            padding: 16px 32px !important;
+            font-size: 18px !important;
+        }
     }
 
     ${media.md} {
         gap: 1.5rem;
+        
+        button {
+            flex: 1;
+            min-width: 0;
+            max-width: none;
+        }
     }
 `;
 
@@ -157,14 +184,17 @@ export const ImageSection = styled.div`
 export const BannerImage = styled.img`
     width: 300px;
     height: auto;
+    min-width: 295px;
+    min-height: 228px;
     object-fit: contain;
     border-radius: 0.75rem;
     position: absolute;
     bottom: 0;
-    right: 50%;
+    right: 28%;
     transform: translateX(50%);
 
     ${media.sm} {
+        right: 30%;
         width: 350px;
     }
 
