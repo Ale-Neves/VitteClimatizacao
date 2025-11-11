@@ -1,12 +1,21 @@
 import { useNotifications } from "../../../hooks/useNotifications";
-import { MENSAGEM_WHATSAPP, DESCRICAO_BANNER, DESCRICAO_BANNER_MOBILE } from "./constants";
+import { ELEMENT_IDS } from "../../../constants";
+import { 
+    MENSAGEM_WHATSAPP, 
+    DESCRICAO_BANNER, 
+    DESCRICAO_BANNER_MOBILE,
+    BUTTON_TEXTS,
+    NOTIFICATION_MESSAGES,
+    CONTACT_CONFIG,
+    BANNER_ASSETS 
+} from "./constants";
 import type { BannerProps } from "./types";
 import { useState, useEffect } from "react";
 
 export const useBanner = ({ onRequestBudget, onViewServices }: BannerProps) => {
     const { showSuccess, showInfo } = useNotifications();
-    const whatsappIcon = "src/assets/icons/icon_whatsapp.svg";
-    const ferramentaIcon = "src/assets/icons/icon_ferramentas.svg";
+    const whatsappIcon = BANNER_ASSETS.WHATSAPP_ICON;
+    const ferramentaIcon = BANNER_ASSETS.TOOLS_ICON;
     
     const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
@@ -21,25 +30,34 @@ export const useBanner = ({ onRequestBudget, onViewServices }: BannerProps) => {
 
     const bannerText = isMobile ? DESCRICAO_BANNER_MOBILE : DESCRICAO_BANNER;
 
+    const buttonTexts = {
+        requestBudget: isMobile ? BUTTON_TEXTS.REQUEST_BUDGET_MOBILE : BUTTON_TEXTS.REQUEST_BUDGET,
+        services: isMobile ? BUTTON_TEXTS.SERVICES_MOBILE : BUTTON_TEXTS.SERVICES,
+    };
+
     const handleRequestBudget = () => {
         const message = encodeURIComponent(MENSAGEM_WHATSAPP);
-        const whatsappUrl = `https://wa.me/5518997140925?text=${message}`;
+        const whatsappUrl = `https://wa.me/${CONTACT_CONFIG.WHATSAPP_NUMBER}?text=${message}`;
         window.open(whatsappUrl, "_blank");
 
         showSuccess(
-            "WhatsApp Aberto",
-            "Você foi redirecionado para o WhatsApp. Nossa equipe responderá em breve!",
-            4000
+            NOTIFICATION_MESSAGES.WHATSAPP_SUCCESS.TITLE,
+            NOTIFICATION_MESSAGES.WHATSAPP_SUCCESS.MESSAGE,
+            NOTIFICATION_MESSAGES.WHATSAPP_SUCCESS.DURATION
         );
 
         if (onRequestBudget) onRequestBudget();
     };
 
     const handleViewServices = () => {
-        const servicesElement = document.getElementById("servicos");
+        const servicesElement = document.getElementById(ELEMENT_IDS.SERVICES_SECTION);
         if (servicesElement) {
             servicesElement.scrollIntoView({ behavior: "smooth" });
-            showInfo("Navegação", "Rolando para a seção de serviços...", 2000);
+            showInfo(
+                NOTIFICATION_MESSAGES.NAVIGATION_SERVICES.TITLE, 
+                NOTIFICATION_MESSAGES.NAVIGATION_SERVICES.MESSAGE, 
+                NOTIFICATION_MESSAGES.NAVIGATION_SERVICES.DURATION
+            );
         }
 
         if (onViewServices) onViewServices();
@@ -51,5 +69,7 @@ export const useBanner = ({ onRequestBudget, onViewServices }: BannerProps) => {
         whatsappIcon,
         ferramentaIcon,
         bannerText,
+        isMobile,
+        buttonTexts,
     };
 };

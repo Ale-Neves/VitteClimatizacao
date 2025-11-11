@@ -11,7 +11,7 @@ export const BannerContainer = styled.section`
     );
     display: flex;
     align-items: center;
-    padding: 3rem 1rem;
+    padding: 0rem 3rem;
     margin-top: 60px;
     align-items: flex-end;
 
@@ -23,7 +23,7 @@ export const BannerContainer = styled.section`
 
     ${media.md} {
         padding: 0rem 32px;
-        min-height: 450px;
+        min-height: 380px;
         margin-top: 75px;
     }
 
@@ -77,14 +77,24 @@ export const TextSection = styled.div`
     gap: 2rem;
 
     ${media.lg} {
+        position: relative;
+        top: 46px;
         gap: 3rem;
         max-width: 60%;
+    }
+
+    ${media.xl} {
+        top: 15px;
+    }
+
+    ${media["2xl"]} {
+        top: -70px;
     }
 `;
 
 export const BannerText = styled.p`
     font-family: ${({ theme }) => theme.fonts.primary};
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: ${({ theme }) => theme.fontWeights.regular};
     line-height: ${({ theme }) => theme.lineHeights.loose};
     color: ${({ theme }) => theme.colors.text.secondary};
@@ -92,32 +102,32 @@ export const BannerText = styled.p`
     text-align: left;
 
     ${media.sm} {
-        font-size: 1.5rem;
+        font-size: 1.625rem;
         line-height: ${({ theme }) => theme.lineHeights.relaxed};
     }
 
     ${media.md} {
-        font-size: 1.25rem;
+        font-size: 1.375rem;
         line-height: ${({ theme }) => theme.lineHeights.relaxed};
     }
 
     ${media.lg} {
-        font-size: 1.5rem;
+        font-size: 1.625rem;
         line-height: ${({ theme }) => theme.lineHeights.relaxed};
     }
 
     ${media.xl} {
-        font-size: 1.875rem;
+        font-size: 2rem;
         line-height: ${({ theme }) => theme.lineHeights.normal};
     }
 
     ${media.xxl} {
-        font-size: 2.25rem;
+        font-size: 2.375rem;
         line-height: ${({ theme }) => theme.lineHeights.normal};
     }
 
     ${media["2xl"]} {
-        font-size: 2.625rem;
+        font-size: 2.75rem;
         line-height: ${({ theme }) => theme.lineHeights.normal};
     }
 `;
@@ -127,6 +137,12 @@ export const ButtonContainer = styled.div`
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+    position: relative;
+    z-index: 999;
+
+    @media (max-width: 640px) {
+        gap: 0.75rem;
+    }
 
     ${media.sm} {
         flex-direction: row;
@@ -135,6 +151,12 @@ export const ButtonContainer = styled.div`
 
     ${media.md} {
         gap: 1.5rem;
+        
+        button {
+            flex: 1;
+            min-width: 0;
+            max-width: none;
+        }
     }
 `;
 
@@ -157,14 +179,18 @@ export const ImageSection = styled.div`
 export const BannerImage = styled.img`
     width: 300px;
     height: auto;
+    min-width: 295px;
+    min-height: 228px;
     object-fit: contain;
     border-radius: 0.75rem;
     position: absolute;
     bottom: 0;
-    right: 50%;
+    right: 28%;
     transform: translateX(50%);
+    z-index: 998;
 
     ${media.sm} {
+        right: 30%;
         width: 350px;
     }
 

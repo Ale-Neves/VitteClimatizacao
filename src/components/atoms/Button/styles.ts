@@ -52,6 +52,11 @@ const getSizeStyles = (size: ButtonSize) => {
                 font-size: 14px;
                 line-height: ${({ theme }) => theme.lineHeights.tight};
 
+                @media (max-width: 640px) {
+                    padding: 6px 12px;
+                    font-size: 12px;
+                }
+
                 ${media.xxl} {
                     padding: 10px 18px;
                     font-size: 16px;
@@ -68,6 +73,16 @@ const getSizeStyles = (size: ButtonSize) => {
                 font-size: 16px;
                 line-height: ${({ theme }) => theme.lineHeights.normal};
 
+                @media (max-width: 640px) {
+                    padding: 10px 16px;
+                    font-size: 14px;
+                }
+
+                ${media.md} {
+                    padding: 10px 20px;
+                    font-size: 15px;
+                }
+
                 ${media.xxl} {
                     padding: 14px 28px;
                     font-size: 18px;
@@ -83,6 +98,16 @@ const getSizeStyles = (size: ButtonSize) => {
                 padding: 16px 32px;
                 font-size: 18px;
                 line-height: ${({ theme }) => theme.lineHeights.normal};
+
+                @media (max-width: 640px) {
+                    padding: 12px 20px;
+                    font-size: 16px;
+                }
+                
+                ${media.md} {
+                    padding: 14px 28px;
+                    font-size: 17px;
+                }
 
                 ${media.xxl} {
                     padding: 18px 36px;

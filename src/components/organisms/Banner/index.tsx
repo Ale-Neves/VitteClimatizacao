@@ -8,7 +8,13 @@ import type { BannerProps } from "./types";
 import { useBanner } from "./useBanner";
 
 export const Banner: React.FC<BannerProps> = props => {
-    const { handleRequestBudget, handleViewServices, bannerText } = useBanner(props);
+    const { 
+        handleRequestBudget, 
+        handleViewServices, 
+        bannerText,
+        isMobile,
+        buttonTexts
+    } = useBanner(props);
 
     return (
         <S.BannerContainer>
@@ -18,23 +24,23 @@ export const Banner: React.FC<BannerProps> = props => {
                     <S.ButtonContainer>
                         <Button 
                             variant="primary" 
-                            size="large"
+                            size={isMobile ? "medium" : "large"}
                             onClick={handleRequestBudget}
-                            icon={<WhatsAppIcon size={20} />}
+                            icon={<WhatsAppIcon size={isMobile ? 18 : 20} />}
                             iconPosition="left"
                             fullWidth
                         >
-                            Solicitar Orçamento
+                            {buttonTexts.requestBudget}
                         </Button>
                         <Button 
                             variant="secondary" 
-                            size="large"
+                            size={isMobile ? "medium" : "large"}
                             onClick={handleViewServices}
-                            icon={<ToolsIcon size={20} />}
+                            icon={<ToolsIcon size={isMobile ? 18 : 20} />}
                             iconPosition="left"
                             fullWidth
                         >
-                            Serviços
+                            {buttonTexts.services}
                         </Button>
                     </S.ButtonContainer>
                 </S.TextSection>
