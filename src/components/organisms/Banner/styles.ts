@@ -144,9 +144,20 @@ export const ButtonContainer = styled.div`
         gap: 0.75rem;
     }
 
+    button {
+        padding: 12px 24px !important;
+        font-size: 16px !important;
+        height: auto;
+    }
+
     ${media.sm} {
         flex-direction: row;
         gap: 1.5rem;
+        
+        button {
+            padding: 16px 32px !important;
+            font-size: 18px !important;
+        }
     }
 
     ${media.md} {
