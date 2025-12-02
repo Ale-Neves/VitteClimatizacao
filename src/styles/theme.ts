@@ -91,22 +91,22 @@ export const theme = {
         tooltip: 1800,
     },
     breakpoints: {
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-        "2xl": "1536px",
-        xxl: "1920px",
+        xss: "390px",  // Mobile
+        xs: "600px",   // Mobile
+        sm: "720px",   // Tablet
+        md: "1280px",  // Notebook
+        lg: "1440px",  // Desktop
+        xl: "1920px",  // Desktop+
     },
 };
 
 export const media = {
+    xss: `@media (min-width: ${theme.breakpoints.xss})`,
+    xs: `@media (min-width: ${theme.breakpoints.xs})`,
     sm: `@media (min-width: ${theme.breakpoints.sm})`,
     md: `@media (min-width: ${theme.breakpoints.md})`,
     lg: `@media (min-width: ${theme.breakpoints.lg})`,
     xl: `@media (min-width: ${theme.breakpoints.xl})`,
-    "2xl": `@media (min-width: ${theme.breakpoints["2xl"]})`,
-    xxl: `@media (min-width: ${theme.breakpoints.xxl})`,
 };
 
 export type Theme = typeof theme;

@@ -57,14 +57,9 @@ const getSizeStyles = (size: ButtonSize) => {
                     font-size: 12px;
                 }
 
-                ${media.xxl} {
+                ${media.xl} {
                     padding: 10px 18px;
                     font-size: 16px;
-                }
-
-                ${media["2xl"]} {
-                    padding: 12px 20px;
-                    font-size: 18px;
                 }
             `;
         case "medium":
@@ -83,14 +78,9 @@ const getSizeStyles = (size: ButtonSize) => {
                     font-size: 15px;
                 }
 
-                ${media.xxl} {
+                ${media.xl} {
                     padding: 14px 28px;
                     font-size: 18px;
-                }
-
-                ${media["2xl"]} {
-                    padding: 16px 32px;
-                    font-size: 20px;
                 }
             `;
         case "large":
@@ -109,14 +99,9 @@ const getSizeStyles = (size: ButtonSize) => {
                     font-size: 17px;
                 }
 
-                ${media.xxl} {
+                ${media.xl} {
                     padding: 18px 36px;
                     font-size: 20px;
-                }
-
-                ${media["2xl"]} {
-                    padding: 20px 40px;
-                    font-size: 22px;
                 }
             `;
         default:

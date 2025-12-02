@@ -12,6 +12,7 @@ export const LogoImage = styled.img<{ $isVisible: boolean }>`
     max-width: 150px;
     object-fit: contain;
     display: ${({ $isVisible }) => ($isVisible ? "block" : "none")};
+    max-height: 60px;
 
     @media (min-width: 768px) {
         height: 50px;

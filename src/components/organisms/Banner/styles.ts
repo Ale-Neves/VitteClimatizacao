@@ -39,14 +39,10 @@ export const BannerContainer = styled.section`
         margin-top: 90px;
     }
 
-    ${media.xxl} {
+    ${media.xl} {
+        padding: 0px 64px;
         min-height: 600px;
         margin-top: 105px;
-    }
-
-    ${media["2xl"]} {
-        min-height: 650px;
-        margin-top: 110px;
     }
 `;
 
@@ -76,8 +72,16 @@ export const TextSection = styled.div`
     flex-direction: column;
     gap: 2rem;
 
-    ${media.lg} {
+    ${media.sm} {
         position: relative;
+        top: -40px;
+    }
+
+    ${media.md} {
+        top:-30px;
+    }
+
+    ${media.lg} {
         top: 46px;
         gap: 3rem;
         max-width: 60%;
@@ -85,10 +89,6 @@ export const TextSection = styled.div`
 
     ${media.xl} {
         top: 15px;
-    }
-
-    ${media["2xl"]} {
-        top: -70px;
     }
 `;
 
@@ -107,27 +107,17 @@ export const BannerText = styled.p`
     }
 
     ${media.md} {
-        font-size: 1.375rem;
+        font-size: 1.75rem;
         line-height: ${({ theme }) => theme.lineHeights.relaxed};
     }
 
     ${media.lg} {
-        font-size: 1.625rem;
+        font-size: 2rem;
         line-height: ${({ theme }) => theme.lineHeights.relaxed};
     }
 
     ${media.xl} {
-        font-size: 2rem;
-        line-height: ${({ theme }) => theme.lineHeights.normal};
-    }
-
-    ${media.xxl} {
         font-size: 2.375rem;
-        line-height: ${({ theme }) => theme.lineHeights.normal};
-    }
-
-    ${media["2xl"]} {
-        font-size: 2.75rem;
         line-height: ${({ theme }) => theme.lineHeights.normal};
     }
 `;
@@ -206,24 +196,16 @@ export const BannerImage = styled.img`
     }
 
     ${media.md} {
-        width: 400px;
+        width: 320px;
     }
 
     ${media.lg} {
-        width: 430px;
+        width: 380px;
         right: 0;
         transform: none;
     }
 
     ${media.xl} {
-        width: 450px;
-    }
-
-    ${media.xxl} {
         width: 500px;
-    }
-
-    ${media["2xl"]} {
-        width: 530px;
     }
 `;

@@ -18,12 +18,8 @@ export const HeaderContainer = styled.header`
         height: 90px;
     }
 
-    ${media.xxl} {
+    ${media.xl} {
         height: 105px;
-    }
-
-    ${media["2xl"]} {
-        height: 110px;
     }
 `;
 
@@ -60,7 +56,7 @@ export const LogoContainer = styled.div`
 export const DesktopNavigation = styled.nav`
     display: none;
 
-    ${media.lg} {
+    ${media.md} {
         display: block;
     }
 `;
@@ -109,12 +105,8 @@ export const NavItem = styled.li<{ $isActive?: boolean }>`
         width: 100%;
     }
 
-    ${media.xxl} {
+    ${media.xl} {
         font-size: 18px;
-    }
-
-    ${media["2xl"]} {
-        font-size: 20px;
     }
 `;
 
@@ -131,7 +123,7 @@ export const MobileMenuButton = styled.button`
     padding: 0;
     z-index: ${({ theme }) => theme.zIndex.modal};
 
-    ${media.lg} {
+    ${media.md} {
         display: none;
     }
 `;
@@ -225,12 +217,8 @@ export const MobileNavItem = styled.li<{ $isActive?: boolean }>`
         border-bottom: none;
     }
 
-    ${media.xxl} {
+    ${media.xl} {
         font-size: 20px;
-    }
-
-    ${media["2xl"]} {
-        font-size: 22px;
     }
 `;
 

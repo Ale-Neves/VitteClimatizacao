@@ -5,9 +5,14 @@ export { Logo } from "./atoms/Logo";
 export { ModerDivider } from "./atoms/ModerDivider";
 export { Icon as SvgIcon } from "./atoms/SvgIcons";
 
+// MOLECULES - Componentes combinados
+export { ServiceCard } from "./molecules/ServiceCard";
+
 // ORGANISMS - Seções complexas da página
 export { Banner } from "./organisms/Banner";
 export { Header } from "./organisms/Header";
+export { ServicesSection } from "./organisms/ServicesSection";
+export { ServicesCarousel } from "./organisms/ServicesCarousel";
 
 // TEMPLATES - Layouts de página
 export { PageLayout } from "./templates/PageLayout";
