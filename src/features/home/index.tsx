@@ -1,6 +1,7 @@
 import React from "react";
 import { Banner, ModerDivider, PageLayout } from "../../components";
 import { ServicesSection } from "../../components/organisms/ServicesSection";
+import { BrandsSection } from "../../components/organisms/BrandsSection";
 
 export const HomePage: React.FC = () => {
     return (
@@ -8,6 +9,7 @@ export const HomePage: React.FC = () => {
             <Banner />
             <ModerDivider />
             <ServicesSection />
+            <BrandsSection />
         </PageLayout>
     );
 };
