@@ -1,7 +1,7 @@
 export const NAVIGATION = {
     HOME: "/",
     SERVICES: "#servicos",
-    ABOUT: "#sobre",
+    ABOUT: "#historia",
     TESTIMONIALS: "#depoimentos",
     CONTACT: "#contatos",
     SHOP: "/loja",

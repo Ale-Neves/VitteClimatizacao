@@ -15,6 +15,7 @@ export { Header } from "./organisms/Header";
 export { ServicesSection } from "./organisms/ServicesSection";
 export { ServicesCarousel } from "./organisms/ServicesCarousel";
 export { BrandsSection } from "./organisms/BrandsSection";
+export { HistorySection } from "./organisms/HistorySection";
 
 // TEMPLATES - Layouts de página
 export { PageLayout } from "./templates/PageLayout";
