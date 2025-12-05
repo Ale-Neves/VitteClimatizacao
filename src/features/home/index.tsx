@@ -6,6 +6,7 @@ import { HistorySection } from "../../components/organisms/HistorySection";
 import { CatalogSection } from "../../components/organisms/CatalogSection";
 import { TestimonialsSection } from "../../components/organisms/TestimonialsSection";
 import { ContactSection } from "../../components/organisms/ContactSection";
+import { Footer } from "../../components/organisms/Footer";
 
 export const HomePage: React.FC = () => {
     return (
@@ -18,6 +19,7 @@ export const HomePage: React.FC = () => {
             <CatalogSection />
             <TestimonialsSection />
             <ContactSection />
+            <Footer />
         </PageLayout>
     );
 };

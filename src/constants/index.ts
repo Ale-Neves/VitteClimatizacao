@@ -43,3 +43,46 @@ export const MESSAGES = {
     WHATSAPP_PRODUCT_INTEREST: (title: string, price: string) => 
         `Olá! Tenho interesse no produto: ${title} - R$ ${price}`,
 };
+
+export const COMPANY = {
+    CNPJ: "00.000.000/0001-00",
+    IE: "000.000.000.000",
+};
+
+export const FOOTER = {
+    COPYRIGHT: "© 2024 Vitte Climatização. Todos os direitos reservados.",
+    DEVELOPED_BY: "Desenvolvido por",
+    DEVELOPER_NAME: "Studway",
+    DEVELOPER_URL: "https://studway.com.br",
+    DESCRIPTION: "Especialistas em climatização e conforto térmico. Instalação, manutenção e venda de ar-condicionado em Adamantina/SP.",
+    SOCIAL: {
+        FACEBOOK: "https://facebook.com/vitteclimatizacao",
+        INSTAGRAM: "https://instagram.com/vitteclimatizacao",
+        WHATSAPP: "https://wa.me/5518997140925",
+    },
+    LEGAL: {
+        PRIVACY_POLICY: {
+            label: "Política de Privacidade",
+            path: "/politica-de-privacidade",
+        },
+        TERMS_OF_USE: {
+            label: "Termos de Uso",
+            path: "/termos-de-uso",
+        },
+        COOKIES_POLICY: {
+            label: "Política de Cookies",
+            path: "/politica-de-cookies",
+        },
+        WARRANTY_POLICY: {
+            label: "Política de Garantias",
+            path: "/politica-de-garantias",
+        },
+    },
+    SERVICES: [
+        "Instalação de Ar-Condicionado",
+        "Manutenção Preventiva",
+        "Manutenção Corretiva",
+        "Limpeza de Aparelhos",
+        "Venda de Equipamentos",
+    ],
+};
