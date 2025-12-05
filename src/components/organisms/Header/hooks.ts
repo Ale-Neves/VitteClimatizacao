@@ -12,6 +12,7 @@ export const useHeader = () => {
                 { id: "catalogo", nav: NAVIGATION.CATALOG },
                 { id: "historia", nav: NAVIGATION.ABOUT },
                 { id: "depoimentos", nav: NAVIGATION.TESTIMONIALS },
+                { id: "contatos", nav: NAVIGATION.CONTACT },
             ];
 
             if (window.scrollY < 200) {

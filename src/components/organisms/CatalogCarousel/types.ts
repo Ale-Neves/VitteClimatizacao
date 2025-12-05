@@ -1,4 +1,5 @@
-import type { ProductCardProps } from "../../../molecules/ProductCard/types";
+import type { ProductCardProps } from "../../molecules/ProductCard/types";
+
 
 export interface CatalogCarouselProps {
     products: ProductCardProps[];

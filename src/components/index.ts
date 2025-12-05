@@ -4,6 +4,9 @@ export { Icon } from "./atoms/Icon";
 export { Logo } from "./atoms/Logo";
 export { ModerDivider } from "./atoms/ModerDivider";
 export { Icon as SvgIcon } from "./atoms/SvgIcons";
+export { Input } from "./atoms/Input";
+export { TextArea } from "./atoms/TextArea";
+export { ContactInfoItem } from "./atoms/ContactInfoItem";
 
 // MOLECULES - Componentes combinados
 export { ServiceCard } from "./molecules/ServiceCard";
@@ -11,6 +14,8 @@ export { BrandCard } from "./molecules/BrandCard";
 export { ProductCard } from "./molecules/ProductCard";
 export { TestimonialCard } from "./molecules/TestimonialCard";
 export { CarouselControls } from "./molecules/CarouselControls";
+export { ContactForm } from "./molecules/ContactForm";
+export { ContactInfoGrid } from "./molecules/ContactInfoGrid";
 
 // ORGANISMS - Seções complexas da página
 export { Banner } from "./organisms/Banner";
@@ -22,6 +27,7 @@ export { HistorySection } from "./organisms/HistorySection";
 export { CatalogSection } from "./organisms/CatalogSection";
 export { CatalogCarousel } from "./organisms/CatalogCarousel";
 export { TestimonialsSection } from "./organisms/TestimonialsSection";
+export { ContactSection } from "./organisms/ContactSection";
 
 // TEMPLATES - Layouts de página
 export { PageLayout } from "./templates/PageLayout";

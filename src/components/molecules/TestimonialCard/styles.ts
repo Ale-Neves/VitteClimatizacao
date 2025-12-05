@@ -14,7 +14,6 @@ export const TestimonialCardContainer = styled.div`
     box-shadow: 0px 1px 40px -20px rgba(255, 255, 255, 0.5);
     position: relative;
     
-    /* XSS: card menor */
     @media (max-width: 479px) {
         width: 280px;
         height: 330px;
@@ -22,7 +21,6 @@ export const TestimonialCardContainer = styled.div`
         gap: 12px;
     }
     
-    /* XS: card maior */
     @media (min-width: 480px) and (max-width: 639px) {
         width: 320px;
         height: 360px;
@@ -30,7 +28,6 @@ export const TestimonialCardContainer = styled.div`
         gap: 14px;
     }
     
-    /* MD: card maior */
     ${media.md} {
         width: 280px;
         height: 330px;
@@ -38,7 +35,6 @@ export const TestimonialCardContainer = styled.div`
         gap: 14px;
     }
     
-    /* LG: card maior */
     ${media.lg} {
         width: 300px;
         height: 350px;
@@ -46,7 +42,6 @@ export const TestimonialCardContainer = styled.div`
         gap: 16px;
     }
     
-    /* XL: card maior */
     ${media.xl} {
         width: 280px;
         height: 330px;
