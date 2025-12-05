@@ -1,8 +1,8 @@
 import React from "react";
 import { ProductCard } from "../../molecules/ProductCard";
 import { CarouselControls } from "../../molecules/CarouselControls";
-import * as S from "./carouselStyles";
 import type { CatalogCarouselProps } from "./types";
+import * as S from "./styles";
 
 export const CatalogCarousel: React.FC<CatalogCarouselProps> = ({
     products,
@@ -17,12 +17,7 @@ export const CatalogCarousel: React.FC<CatalogCarouselProps> = ({
 }) => {
     return (
         <S.CarouselContainer>
-            <S.CarouselWrapper
-                ref={carouselRef}
-                onTouchStart={onTouchStart}
-                onTouchMove={onTouchMove}
-                onTouchEnd={onTouchEnd}
-            >
+            <S.CarouselWrapper ref={carouselRef}>
                 {products.map(product => (
                     <ProductCard key={product.id} {...product} />
                 ))}

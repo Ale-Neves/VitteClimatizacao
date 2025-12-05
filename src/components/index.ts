@@ -9,6 +9,8 @@ export { Icon as SvgIcon } from "./atoms/SvgIcons";
 export { ServiceCard } from "./molecules/ServiceCard";
 export { BrandCard } from "./molecules/BrandCard";
 export { ProductCard } from "./molecules/ProductCard";
+export { TestimonialCard } from "./molecules/TestimonialCard";
+export { CarouselControls } from "./molecules/CarouselControls";
 
 // ORGANISMS - Seções complexas da página
 export { Banner } from "./organisms/Banner";
@@ -18,6 +20,8 @@ export { ServicesCarousel } from "./organisms/ServicesCarousel";
 export { BrandsSection } from "./organisms/BrandsSection";
 export { HistorySection } from "./organisms/HistorySection";
 export { CatalogSection } from "./organisms/CatalogSection";
+export { CatalogCarousel } from "./organisms/CatalogCarousel";
+export { TestimonialsSection } from "./organisms/TestimonialsSection";
 
 // TEMPLATES - Layouts de página
 export { PageLayout } from "./templates/PageLayout";

@@ -6,7 +6,7 @@ export const ProductCard = styled.div`
     max-width: 280px;
     height: auto;
     min-height: 480px;
-    background: linear-gradient(180deg, #ffffff 0%, #cdcdcd 100%);
+    background: ${({ theme }) => `linear-gradient(180deg, ${theme.colors.text.primary} 0%, ${theme.colors.gray[300]} 100%)`};
     border-radius: 16px;
     padding: 18px;
     display: flex;
@@ -63,7 +63,7 @@ export const Tag = styled.span<{ $variant: "oferta" | "prime" }>`
     justify-content: center;
     border-radius: 6px;
     background-color: ${({ $variant }) => ($variant === "oferta" ? "#14F1B3" : "#A87CFF")};
-    color: #1b1b1b;
+    color: ${({ theme }) => theme.colors.background.primary};
     font-size: 12px;
     font-weight: ${({ theme }) => theme.fontWeights.bold};
     font-family: ${({ theme }) => theme.fonts.secondary};
@@ -141,7 +141,7 @@ export const OriginalPrice = styled.span`
     font-family: ${({ theme }) => theme.fonts.secondary};
     font-weight: ${({ theme }) => theme.fontWeights.regular};
     font-size: 14px;
-    color: #acacac;
+    color: ${({ theme }) => theme.colors.gray[400]};
     text-decoration: line-through;
 
     ${media.xl} {
@@ -153,7 +153,7 @@ export const DiscountTag = styled.span`
     display: inline-block;
     padding: 2px 8px;
     background-color: #14f1b3;
-    color: #1b1b1b;
+    color: ${({ theme }) => theme.colors.background.primary};
     font-family: ${({ theme }) => theme.fonts.secondary};
     font-weight: ${({ theme }) => theme.fontWeights.bold};
     font-size: 12px;
@@ -183,9 +183,9 @@ export const WhatsAppButton = styled.button`
     justify-content: center;
     gap: 8px;
     background: transparent;
-    border: 2px solid #7c7c7c;
+    border: 2px solid ${({ theme }) => theme.colors.gray[500]};
     border-radius: 6px;
-    color: #7c7c7c;
+    color: ${({ theme }) => theme.colors.gray[500]};
     font-family: ${({ theme }) => theme.fonts.secondary};
     font-weight: ${({ theme }) => theme.fontWeights.semibold};
     font-size: 12px;
@@ -194,14 +194,14 @@ export const WhatsAppButton = styled.button`
     margin-top: auto;
 
     &:hover {
-        background-color: rgba(124, 124, 124, 0.1);
+        background-color: ${({ theme }) => `${theme.colors.gray[500]}1A`};
         transform: scale(1.05);
     }
 
     svg {
         width: 16px;
         height: 16px;
-        fill: #7c7c7c;
+        fill: ${({ theme }) => theme.colors.gray[500]};
     }
 
     ${media.xl} {

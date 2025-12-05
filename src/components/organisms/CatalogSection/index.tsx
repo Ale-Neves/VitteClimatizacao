@@ -2,7 +2,7 @@ import React from "react";
 import { CATALOG_SECTION_TEXTS } from "./constants";
 import { useCatalogSection } from "./hooks";
 import { ProductCard } from "../../molecules/ProductCard";
-import { CatalogCarousel } from "./CatalogCarousel";
+import { CatalogCarousel } from "../CatalogCarousel";
 import * as S from "./styles";
 
 export const CatalogSection: React.FC = () => {
@@ -34,6 +34,7 @@ export const CatalogSection: React.FC = () => {
             <CatalogCarousel
                 products={products}
                 currentIndex={currentIndex}
+                // @ts-ignore
                 carouselRef={carouselRef}
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}

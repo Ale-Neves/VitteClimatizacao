@@ -6,21 +6,19 @@ export const useHeader = () => {
     const [activeNav, setActiveNav] = useState("/");
 
     useEffect(() => {
-        // Detecta a seção ativa baseado no scroll
         const handleScroll = () => {
             const sections = [
                 { id: "servicos", nav: NAVIGATION.SERVICES },
-                { id: "catalogo", nav: "#catalogo" },
+                { id: "catalogo", nav: NAVIGATION.CATALOG },
                 { id: "historia", nav: NAVIGATION.ABOUT },
+                { id: "depoimentos", nav: NAVIGATION.TESTIMONIALS },
             ];
 
-            // Se estiver no topo da página
             if (window.scrollY < 200) {
                 setActiveNav(NAVIGATION.HOME);
                 return;
             }
 
-            // Verifica qual seção está visível
             for (const section of sections) {
                 const element = document.getElementById(section.id);
                 if (element) {
@@ -35,7 +33,7 @@ export const useHeader = () => {
             }
         };
 
-        handleScroll(); // Executa uma vez ao montar
+        handleScroll();
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -46,11 +44,9 @@ export const useHeader = () => {
 
     const handleNavClick = (href: string) => {
         if (href === NAVIGATION.HOME || href === "/") {
-            // Scroll para o topo
             window.scrollTo({ top: 0, behavior: "smooth" });
             setActiveNav(NAVIGATION.HOME);
         } else if (href.startsWith("#")) {
-            // Scroll interno para seção
             const element = document.getElementById(href.replace("#", ""));
             if (element) {
                 const headerOffset = 80;
@@ -64,7 +60,6 @@ export const useHeader = () => {
                 setActiveNav(href);
             }
         } else {
-            // Navegação para outras páginas
             window.location.href = href;
             setActiveNav(href);
         }

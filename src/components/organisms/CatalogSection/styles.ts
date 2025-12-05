@@ -3,7 +3,7 @@ import { media } from "../../../styles/theme";
 
 export const CatalogSectionContainer = styled.section`
     width: 100%;
-    background-color: #2a2a2a;
+    background-color: ${({ theme }) => theme.colors.gray[700]};
     padding: 60px 20px;
     display: flex;
     flex-direction: column;

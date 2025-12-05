@@ -7,21 +7,13 @@ export const ServicesCarousel: React.FC<ServicesCarouselProps> = ({
     services,
     currentIndex,
     carouselRef,
-    onTouchStart,
-    onTouchMove,
-    onTouchEnd,
     onNext,
     onPrev,
     onGoToSlide,
 }) => {
     return (
         <S.CarouselContainer>
-            <S.CarouselWrapper
-                ref={carouselRef}
-                onTouchStart={onTouchStart}
-                onTouchMove={onTouchMove}
-                onTouchEnd={onTouchEnd}
-            >
+            <S.CarouselWrapper ref={carouselRef}>
                 {services.map(service => (
                     <ServiceCard key={service.id} {...service} />
                 ))}
