@@ -1,6 +1,7 @@
 export const NAVIGATION = {
     HOME: "/",
     SERVICES: "#servicos",
+    CATALOG: "#catalogo",
     ABOUT: "#historia",
     TESTIMONIALS: "#depoimentos",
     CONTACT: "#contatos",
@@ -11,6 +12,7 @@ export const TEXTS = {
     NAV: {
         HOME: "Início",
         SERVICES: "Serviços",
+        CATALOG: "Catálogo",
         ABOUT: "Sobre Nós",
         TESTIMONIALS: "Depoimentos",
         CONTACT: "Contatos",

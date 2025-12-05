@@ -44,6 +44,12 @@ export const Header: React.FC = () => {
                                 {TEXTS.NAV.ABOUT}
                             </S.NavItem>
                             <S.NavItem
+                                $isActive={activeNav === NAVIGATION.CATALOG}
+                                onClick={() => handleNavClick(NAVIGATION.CATALOG)}
+                            >
+                                {TEXTS.NAV.CATALOG}
+                            </S.NavItem>
+                            <S.NavItem
                                 $isActive={activeNav === NAVIGATION.TESTIMONIALS}
                                 onClick={() => handleNavClick(NAVIGATION.TESTIMONIALS)}
                             >
@@ -87,6 +93,12 @@ export const Header: React.FC = () => {
                         onClick={() => handleNavClick(NAVIGATION.SERVICES)}
                     >
                         {TEXTS.NAV.SERVICES}
+                    </S.MobileNavItem>
+                    <S.MobileNavItem
+                        $isActive={activeNav === NAVIGATION.CATALOG}
+                        onClick={() => handleNavClick(NAVIGATION.CATALOG)}
+                    >
+                        {TEXTS.NAV.CATALOG}
                     </S.MobileNavItem>
                     <S.MobileNavItem
                         $isActive={activeNav === NAVIGATION.ABOUT}

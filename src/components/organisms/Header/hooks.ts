@@ -6,8 +6,38 @@ export const useHeader = () => {
     const [activeNav, setActiveNav] = useState("/");
 
     useEffect(() => {
-        // Detecta a página atual
-        setActiveNav(window.location.pathname);
+        // Detecta a seção ativa baseado no scroll
+        const handleScroll = () => {
+            const sections = [
+                { id: "servicos", nav: NAVIGATION.SERVICES },
+                { id: "catalogo", nav: "#catalogo" },
+                { id: "historia", nav: NAVIGATION.ABOUT },
+            ];
+
+            // Se estiver no topo da página
+            if (window.scrollY < 200) {
+                setActiveNav(NAVIGATION.HOME);
+                return;
+            }
+
+            // Verifica qual seção está visível
+            for (const section of sections) {
+                const element = document.getElementById(section.id);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    const isVisible = rect.top <= 150 && rect.bottom >= 150;
+                    
+                    if (isVisible) {
+                        setActiveNav(section.nav);
+                        return;
+                    }
+                }
+            }
+        };
+
+        handleScroll(); // Executa uma vez ao montar
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const toggleMobileMenu = () => {
@@ -15,11 +45,23 @@ export const useHeader = () => {
     };
 
     const handleNavClick = (href: string) => {
-        if (href.startsWith("#")) {
-            // Scroll interno
+        if (href === NAVIGATION.HOME || href === "/") {
+            // Scroll para o topo
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            setActiveNav(NAVIGATION.HOME);
+        } else if (href.startsWith("#")) {
+            // Scroll interno para seção
             const element = document.getElementById(href.replace("#", ""));
             if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
+                const headerOffset = 80;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+                setActiveNav(href);
             }
         } else {
             // Navegação para outras páginas
@@ -30,7 +72,8 @@ export const useHeader = () => {
     };
 
     const handleLogoClick = () => {
-        window.location.href = "/";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        setActiveNav(NAVIGATION.HOME);
     };
 
     const closeMobileMenu = () => {

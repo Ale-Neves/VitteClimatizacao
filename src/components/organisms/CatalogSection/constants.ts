@@ -1,0 +1,6 @@
+export const CATALOG_SECTION_TEXTS = {
+    MAIN_PHRASE: "NOSSOS MELHORES PRODUTOS",
+    TITLE: "Catálogo em Destaque",
+    VIEW_MORE: "VER MAIS PRODUTOS",
+    VIEW_LESS: "VER MENOS PRODUTOS",
+} as const;
