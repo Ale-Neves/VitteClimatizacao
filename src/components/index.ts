@@ -25,6 +25,7 @@ export { FooterServices } from "./molecules/FooterServices";
 export { FooterLegal } from "./molecules/FooterLegal";
 export { FooterContact } from "./molecules/FooterContact";
 export { CookieBanner } from "./molecules/CookieBanner";
+export { UnderConstruction } from "./molecules/UnderConstruction";
 
 // ORGANISMS - Seções complexas da página
 export { Banner } from "./organisms/Banner";
