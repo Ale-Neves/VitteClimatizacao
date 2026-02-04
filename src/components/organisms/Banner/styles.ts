@@ -78,7 +78,7 @@ export const TextSection = styled.div`
     }
 
     ${media.md} {
-        top:-30px;
+        top: -30px;
     }
 
     ${media.lg} {
@@ -143,7 +143,7 @@ export const ButtonContainer = styled.div`
     ${media.sm} {
         flex-direction: row;
         gap: 1.5rem;
-        
+
         button {
             padding: 16px 32px !important;
             font-size: 18px !important;
@@ -152,7 +152,7 @@ export const ButtonContainer = styled.div`
 
     ${media.md} {
         gap: 1.5rem;
-        
+
         button {
             flex: 1;
             min-width: 0;
@@ -191,16 +191,16 @@ export const BannerImage = styled.img`
     z-index: 998;
 
     ${media.sm} {
-        right: 30%;
-        width: 350px;
+        right: 39%;
+        width: 375px;
     }
 
     ${media.md} {
-        width: 320px;
+        width: 356px;
     }
 
     ${media.lg} {
-        width: 380px;
+        width: 460px;
         right: 0;
         transform: none;
     }
