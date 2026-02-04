@@ -9,6 +9,7 @@ export { TextArea } from "./atoms/TextArea";
 export { ContactInfoItem } from "./atoms/ContactInfoItem";
 export { SocialLink } from "./atoms/SocialLink";
 export { WhatsAppButton } from "./atoms/WhatsAppButton";
+export { SEO } from "./atoms/SEO";
 
 // MOLECULES - Componentes combinados
 export { ServiceCard } from "./molecules/ServiceCard";

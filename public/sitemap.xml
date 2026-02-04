@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Home Page -->
+    <url>
+        <loc>https://vitteclimatizacao.com.br/</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Services Section -->
+    <url>
+        <loc>https://vitteclimatizacao.com.br/#servicos</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Catalog Section -->
+    <url>
+        <loc>https://vitteclimatizacao.com.br/#catalogo</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- About Section -->
+    <url>
+        <loc>https://vitteclimatizacao.com.br/#historia</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Testimonials Section -->
+    <url>
+        <loc>https://vitteclimatizacao.com.br/#depoimentos</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Contact Section -->
+    <url>
+        <loc>https://vitteclimatizacao.com.br/#contatos</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Privacy Policy -->
+    <url>
+        <loc>https://vitteclimatizacao.com.br/politica-de-privacidade</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Terms of Use -->
+    <url>
+        <loc>https://vitteclimatizacao.com.br/termos-de-uso</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Cookies Policy -->
+    <url>
+        <loc>https://vitteclimatizacao.com.br/politica-de-cookies</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Warranty Policy -->
+    <url>
+        <loc>https://vitteclimatizacao.com.br/politica-de-garantias</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+</urlset>

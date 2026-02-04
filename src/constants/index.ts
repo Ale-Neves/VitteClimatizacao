@@ -97,3 +97,5 @@ export const COOKIES = {
         POLICY_LINK_TEXT: "Política de Cookies",
     },
 };
+
+export * from "./seo";
