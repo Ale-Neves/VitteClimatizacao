@@ -8,6 +8,7 @@ export { Input } from "./atoms/Input";
 export { TextArea } from "./atoms/TextArea";
 export { ContactInfoItem } from "./atoms/ContactInfoItem";
 export { SocialLink } from "./atoms/SocialLink";
+export { WhatsAppButton } from "./atoms/WhatsAppButton";
 
 // MOLECULES - Componentes combinados
 export { ServiceCard } from "./molecules/ServiceCard";
@@ -22,6 +23,7 @@ export { FooterSocial } from "./molecules/FooterSocial";
 export { FooterServices } from "./molecules/FooterServices";
 export { FooterLegal } from "./molecules/FooterLegal";
 export { FooterContact } from "./molecules/FooterContact";
+export { CookieBanner } from "./molecules/CookieBanner";
 
 // ORGANISMS - Seções complexas da página
 export { Banner } from "./organisms/Banner";

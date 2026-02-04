@@ -86,3 +86,14 @@ export const FOOTER = {
         "Venda de Equipamentos",
     ],
 };
+
+export const COOKIES = {
+    CONSENT_KEY: "vitte_cookie_consent",
+    BANNER: {
+        TITLE: "🍪 Cookies & Privacidade",
+        DESCRIPTION: "Este site utiliza cookies para melhorar sua experiência de navegação e analisar o tráfego.",
+        ACCEPT_BUTTON: "Aceitar Cookies",
+        REJECT_BUTTON: "Recusar",
+        POLICY_LINK_TEXT: "Política de Cookies",
+    },
+};
