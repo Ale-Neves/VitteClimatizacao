@@ -24,34 +24,26 @@ export const FooterLinks: React.FC<FooterLinksProps> = ({ hideTitle = false }) =
             {!hideTitle && <S.Title>Navegação</S.Title>}
             <S.LinksList>
                 <S.LinkItem>
-                    <a onClick={() => handleNavClick(NAVIGATION.HOME)}>
-                        {TEXTS.NAV.HOME}
-                    </a>
+                    <a onClick={() => handleNavClick(NAVIGATION.HOME)}>{TEXTS.NAV.HOME}</a>
                 </S.LinkItem>
                 <S.LinkItem>
-                    <a onClick={() => handleNavClick(NAVIGATION.SERVICES)}>
-                        {TEXTS.NAV.SERVICES}
-                    </a>
+                    <a onClick={() => handleNavClick(NAVIGATION.SERVICES)}>{TEXTS.NAV.SERVICES}</a>
                 </S.LinkItem>
                 <S.LinkItem>
-                    <a onClick={() => handleNavClick(NAVIGATION.ABOUT)}>
-                        {TEXTS.NAV.ABOUT}
-                    </a>
+                    <a onClick={() => handleNavClick(NAVIGATION.ABOUT)}>{TEXTS.NAV.ABOUT}</a>
                 </S.LinkItem>
-                <S.LinkItem>
+                {/* <S.LinkItem>
                     <a onClick={() => handleNavClick(NAVIGATION.CATALOG)}>
                         {TEXTS.NAV.CATALOG}
                     </a>
-                </S.LinkItem>
+                </S.LinkItem> */}
                 <S.LinkItem>
                     <a onClick={() => handleNavClick(NAVIGATION.TESTIMONIALS)}>
                         {TEXTS.NAV.TESTIMONIALS}
                     </a>
                 </S.LinkItem>
                 <S.LinkItem>
-                    <a onClick={() => handleNavClick(NAVIGATION.CONTACT)}>
-                        {TEXTS.NAV.CONTACT}
-                    </a>
+                    <a onClick={() => handleNavClick(NAVIGATION.CONTACT)}>{TEXTS.NAV.CONTACT}</a>
                 </S.LinkItem>
             </S.LinksList>
         </S.FooterLinksContainer>

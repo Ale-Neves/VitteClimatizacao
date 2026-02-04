@@ -21,11 +21,12 @@ export const TEXTS = {
 };
 
 export const ERROR_MESSAGES = {
-    NOTIFICATION_PROVIDER_MISSING: "useNotifications deve ser usado dentro de um NotificationProvider"
+    NOTIFICATION_PROVIDER_MISSING:
+        "useNotifications deve ser usado dentro de um NotificationProvider",
 };
 
 export const ELEMENT_IDS = {
-    SERVICES_SECTION: "servicos"
+    SERVICES_SECTION: "servicos",
 };
 
 export const CONTACT = {
@@ -40,7 +41,7 @@ export const CONTACT = {
 };
 
 export const MESSAGES = {
-    WHATSAPP_PRODUCT_INTEREST: (title: string, price: string) => 
+    WHATSAPP_PRODUCT_INTEREST: (title: string, price: string) =>
         `Olá! Tenho interesse no produto: ${title} - R$ ${price}`,
 };
 
@@ -54,7 +55,8 @@ export const FOOTER = {
     DEVELOPED_BY: "Desenvolvido por",
     DEVELOPER_NAME: "Studway",
     DEVELOPER_URL: "https://studway.com.br",
-    DESCRIPTION: "Especialistas em climatização e conforto térmico. Instalação, manutenção e venda de ar-condicionado em Adamantina/SP.",
+    DESCRIPTION:
+        "Especialistas em climatização e conforto térmico. Instalação, manutenção e venda de ar-condicionado em Adamantina/SP.",
     SOCIAL: {
         FACEBOOK: "https://facebook.com/vitteclimatizacao",
         INSTAGRAM: "https://instagram.com/vitteclimatizacao",
@@ -91,7 +93,8 @@ export const COOKIES = {
     CONSENT_KEY: "vitte_cookie_consent",
     BANNER: {
         TITLE: "🍪 Cookies & Privacidade",
-        DESCRIPTION: "Este site utiliza cookies para melhorar sua experiência de navegação e analisar o tráfego.",
+        DESCRIPTION:
+            "Este site utiliza cookies para melhorar sua experiência de navegação e analisar o tráfego.",
         ACCEPT_BUTTON: "Aceitar Cookies",
         REJECT_BUTTON: "Recusar",
         POLICY_LINK_TEXT: "Política de Cookies",

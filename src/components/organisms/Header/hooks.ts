@@ -25,7 +25,7 @@ export const useHeader = () => {
                 if (element) {
                     const rect = element.getBoundingClientRect();
                     const isVisible = rect.top <= 150 && rect.bottom >= 150;
-                    
+
                     if (isVisible) {
                         setActiveNav(section.nav);
                         return;
@@ -56,7 +56,7 @@ export const useHeader = () => {
 
                 window.scrollTo({
                     top: offsetPosition,
-                    behavior: "smooth"
+                    behavior: "smooth",
                 });
                 setActiveNav(href);
             }
